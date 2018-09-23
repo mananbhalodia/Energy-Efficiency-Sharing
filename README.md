@@ -1,7 +1,7 @@
 # eeShares
 
 Contact: Manan Bhalodia : mananbhalodia@gmail.com
-Link to proposal: https://github.com/jhomble/eeShares/blob/master/EeShares%20Project.docx
+
 ## What is it
 EeShares stands for Energy Efficiency Sharing
 It is a mobile application designed to connect facility managers with the residents of its buildings.
