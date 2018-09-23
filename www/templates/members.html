@@ -1,0 +1,22 @@
+<ion-view title="Members" id="page11">
+  <ion-nav-title>Members</ion-nav-title>"
+  <ion-content padding="true" class="has-header">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <ion-list id="members-list8">
+      <ion-item class="item-avatar" id="members-list-item6" ng-repeat="user in users | orderBy: '-score'">
+        <img src="data:image/jpeg;base64,{{user.icon}}">
+        <h2>{{user.name}}</h2>
+        <p>Score: {{user.score}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar align-title="center" class="bar-assertive">
+    <div class="buttons">
+      <button class="button" ui-sref="tabsController.help">Help</button>
+    </div>
+    <h1 class="title">EeShares!</h1>
+  </ion-footer-bar>
+</ion-view>

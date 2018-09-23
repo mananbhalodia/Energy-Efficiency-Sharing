@@ -1,0 +1,29 @@
+<ion-view title="Message Board" id="page12">
+  <ion-nav-title>Messages</ion-nav-title>"
+  <ion-content padding="true" class="has-header">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>    
+    <ion-list id="messageBoard-list9">
+      <label class="item item-input" id="messageBoard-input20">
+        <input type="text" placeholder="Write a Message!" ng-model="message.message">
+      </label>
+    </ion-list>
+    <button id="messageBoard-button19" ng-click="send()" class="button button-assertive  button-block">Send!</button>
+    <a ui-sref="tabsController.campaignPictures({&quot;campaignID&quot;:&quot;&quot;+id+&quot;&quot;,&quot;userID&quot;:&quot;&quot;+userID+&quot;&quot;})" class="button button-energized  button-block">See Pictures!</a>
+    <ion-list id="messageBoard-list10">
+      <ion-item class="item-avatar" id="messageBoard-list-item7" ng-repeat="item in messages | orderBy:'item.date':true">
+        <img src="data:image/jpeg;base64,{{item.icon}}">
+        <h2>{{item.name}}</h2>
+        <p>{{item.message}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar align-title="center" class="bar-assertive">
+    <div class="buttons">
+      <button class="button" ui-sref="tabsController.help">Help</button>
+    </div>
+    <h1 class="title">EeShares!</h1>
+  </ion-footer-bar>
+</ion-view>

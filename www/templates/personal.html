@@ -1,0 +1,44 @@
+<ion-view id="page3">
+  <ion-nav-title>Personal</ion-nav-title>"
+  <ion-content padding="true" class=" manual-remove-top-padding has-header">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>    
+    <div class="spacer" style="width: 300px; height: 12px;"></div>
+    <div id="personal-markdown3" style="text-align:center;" class="show-list-numbers-and-dots">
+      <h3 style="color:#000000;">Welcome {{name}}!</h3>
+    </div>
+    <center>
+      <p>click to edit profile picture:</p>
+      <img src="data:image/jpeg;base64,{{icon}}" ng-click="addMedia()" class="thumbnail">
+    </center>
+    <div class="spacer" style="width: 300px; height: 12px;"></div>
+    <ion-list id="personal-list6">
+      <ion-item class="item-icon-right" id="personal-list-item4" ui-sref="tabsController.campaign({&quot;id&quot;:&quot;&quot;+campaign.id+&quot;&quot;})" ng-repeat="campaign in campaigns">{{campaign.name}}
+        <span class="item-note">{{campaign.active}}</span>
+        <i class="icon ion-android-bicycle"></i>
+        <ion-option-button class="button-assertive">Info</ion-option-button>
+      </ion-item>
+    </ion-list>
+    <div ng-show="empty">
+      <img src="https://s3.amazonaws.com/ionic-io-static/Gj0DtnuxQshXwLm9bUib_buildingtab.png" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+    </div>
+    <!--<button id="personal-button6" ng-click="logout()" style="border-radius:0px 0px 0px 0px;" class="button button-assertive  button-block">Logout</button>-->
+</ion-content>
+  <!--<div class="buttons">
+    <button class="button" ng-click="showAlert()">alert</button>
+  </div>-->
+<ion-footer-bar align-title="center" class="bar-assertive">
+  <div class="buttons">
+    <button class="button" ui-sref="tabsController.help">Help</button>
+  </div>
+  <div class="buttons">
+    <button class="button" ui-sref="howTo">How To</button>
+  </div>
+  <h1 class="title">EeShares!</h1>
+  <div class="buttons">
+    <button class="button" ng-click="logout()">Logout</button>
+  </div>
+</ion-footer-bar>
+</ion-view>
